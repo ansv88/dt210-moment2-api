@@ -47,8 +47,8 @@ app.get("/dt210g-todolist/todolist", async (req, res) => {
     //Kontrollera om resultatet är tomt
     if (!result.length) {
       return res
-        .status(404)
-        .json({ error: "Ingen att göra-lista hittades." }); //Svar med statuskod och felmeddelande
+        .status(200)
+        .json([]);
     }
 
     //Om databasfrågan fungerar som den ska, returnera statuskod samt datan från servern
